@@ -1,0 +1,37 @@
+{
+  "name": "todoistjs",
+  "version": "0.1.0",
+  "description": "Unofficial javascript client for Todoist API",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "eslint": "eslint app"
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    }
+  },
+  "keywords": [
+    "todoist"
+  ],
+  "author": "@Cosmitar",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^18.0.0",
+    "babel-plugin-transform-async-to-generator": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-env": "^1.1.8",
+    "dotenv": "^4.0.0",
+    "eslint": "^3.14.1",
+    "eslint-config-rackt": "^1.1.1",
+    "jest": "^18.1.0",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "fetch-everywhere": "^1.0.5"
+  }
+}
