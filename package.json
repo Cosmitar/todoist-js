@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "eslint": "eslint app",
+    "eslint": "eslint todoist",
     "build": "./node_modules/babel-cli/bin/babel.js todoist --out-file dist/index.js --source-maps",
     "prepublish": "npm run build"
   },
@@ -17,7 +17,7 @@
   "keywords": [
     "todoist"
   ],
-  "author": "@Cosmitar",
+  "author": "Cosmitar",
   "license": "ISC",
   "devDependencies": {
     "babel": "^6.20.0",
@@ -31,8 +31,7 @@
     "dotenv": "^4.0.0",
     "eslint": "^3.14.1",
     "eslint-config-rackt": "^1.1.1",
-    "jest": "^18.1.0",
-    "webpack": "^1.14.0"
+    "jest": "^18.1.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.22.0",
