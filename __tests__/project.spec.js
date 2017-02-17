@@ -2,7 +2,7 @@ require('dotenv').config();
 require("babel-polyfill");
 
 import API from './../todoist/Api';
-const api = new API(process.env.DEVEL_ACCESS_TOKEN);
+const api = new API(process.env.ACCESS_TOKEN);
 
 let project1 = null;
 let project2 = null;

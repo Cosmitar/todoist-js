@@ -5,7 +5,7 @@ import {
 } from './helpers';
 
 import API from './../todoist/Api';
-const api = new API(process.env.DEVEL_ACCESS_TOKEN);
+const api = new API(process.env.ACCESS_TOKEN);
 
 
 afterAll(async () => {

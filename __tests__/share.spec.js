@@ -2,8 +2,8 @@ require('dotenv').config();
 require("babel-polyfill");
 
 import API from './../todoist/Api';
-const api = new API(process.env.DEVEL_ACCESS_TOKEN);
-const api2 = new API(process.env.ALT_ACCOUNT_API_TOKEN);
+const api = new API(process.env.ACCESS_TOKEN);
+const api2 = new API(process.env.ALTERNATIVE_ACCOUNT_ACCESS_TOKEN);
 
 afterAll(async () => {
   // from api
