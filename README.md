@@ -35,8 +35,9 @@ Official API [Docs](https://developer.todoist.com/?python#update-multiple-orders
 - Test browsers compatibility.
 - Implement a demo app using this library.
 
-## Testing
-This repo includes a Jest suite of tests.
+## Development / Testing
+Clone this repo `git clone git@github.com:Cosmitar/todoist-js.git`.
+This repo includes a Jest suite of tests, used for TDD.
 Before start, make sure you create a `.env` file (you can use `.env-example` as template) and complete, as minimum requirement, the variable `ACCESS_TOKEN` with a valid user access token.
 Then, install all dev dependencies by running `npm install`
 
