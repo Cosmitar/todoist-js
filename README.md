@@ -37,7 +37,7 @@ Official API [Docs](https://developer.todoist.com/?python#update-multiple-orders
 
 ## Testing
 This repo includes a Jest suite of tests.
-Before start, make sure to create a `.env` file (you can use `.env-example` as template) and complete, as minimum requirement, the variable `ACCESS_TOKEN` with a valid user access token.
+Before start, make sure you create a `.env` file (you can use `.env-example` as template) and complete, as minimum requirement, the variable `ACCESS_TOKEN` with a valid user access token.
 
 WARNING: Do not run all tests together with `npm run test` or you'll get a _max request limit per seconds_ error.
 
