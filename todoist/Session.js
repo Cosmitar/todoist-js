@@ -4,22 +4,70 @@
 * @author Cosmitar
 */
 import 'fetch-everywhere';
+import { generate_uuid } from './utils/uuid';
 /**
 * @class Session
 */
 class Session {
   /**
   * @param {Object} config Configuration object with optional params:
-  *   app_token, client_id, client_secret, token.
+  *   app_token
+  *   client_id
+  *   scope
+  *   state
+  *   client_secret
+  *   token <- this is the access token
   * @constructor
   */
   constructor(config = {}) {
     this._app_token = config.app_token || '';
     this._client = config.client_id || '';
+    this._scope = config.scope || 'data:read_write,data:delete,project:delete';
+    this._state = config.state || generate_uuid();
     this._secret = config.client_secret || '';
-    this._token = config.token || '';
+    this._token = config.token || ''; // access token
     this._sync_token = '*';
-    this._exchange_toke_endpoint = 'https://todoist.com/oauth/access_token';
+    this._auth_url = 'https://todoist.com/oauth/authorize';
+    this._exchange_token_url = 'https://todoist.com/oauth/access_token';
+  }
+
+  /**
+  * Simplifies deferred config after creating an instance
+  *   of a session.
+  * @param {Object} config An object that can contain
+  *   app_token
+  *   client_id
+  *   scope
+  *   state
+  *   client_secret
+  */
+  config(config = {}) {
+    this._app_token = config.app_token || this._app_token;
+    this._client = config.client_id || this._client;
+    this._scope = config.scope || this._scope;
+    this._state = config.state || this._state;
+    this._secret = config.client_secret || this._secret;
+  }
+
+  /**
+  * Sets an access token for current session.
+  * @param {string} token
+  */
+  set accessToken(token) {
+    this._token = token;
+  }
+
+  /**
+  * Returns the authorization url based on configurations.
+  * @return string The full authorization url.
+  */
+  requestAuthorizationUrl() {
+    const query = this._dataToQueryString({
+      client_id: this._client,
+      scope: this._scope,
+      state: this._state,
+    });
+    return `${this._auth_url}?${query}`;
   }
 
   /**
@@ -27,20 +75,13 @@ class Session {
   * @return {Promise}
   */
   getAccessToken() {
-    return this.request(this._exchange_toke_endpoint, 'POST', {
+    return this.request(this._exchange_toke_url, 'POST', {
       client_id: this._client,
       client_secret: this._secret,
       code: this._code,
     });
   }
 
-  /**
-  * Sets a token for current session.
-  * @param {string} token
-  */
-  setAccessToken(token) {
-    this._token = token;
-  }
 
   /**
   * Performs a GET request for the given url and parameters.
@@ -60,6 +101,12 @@ class Session {
   */
   post(url, data = {}) {
     return this.request(url, 'POST', data);
+  }
+
+  _dataToQueryString(data) {
+    return Object.keys(data)
+      .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
+      .join('&');
   }
 
   /**
@@ -84,9 +131,7 @@ class Session {
       data.sync_token = this._sync_token;
     }
 
-    const query = Object.keys(data)
-    .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
-    .join('&');
+    const query = this._dataToQueryString(data);
 
     const request_url = `${url}?${query}`;
     return fetch(request_url, {

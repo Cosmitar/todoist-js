@@ -41,7 +41,7 @@ class UploadsManager extends Manager {
   login(email, password) {
     return this.api.post('user/login', { email, password }).then((response) => {
       if (response.token) {
-        this.api.session.setAccessToken(response.token);
+        this.api.session.accessToken = response.token;
       }
 
       return response;
@@ -62,7 +62,7 @@ class UploadsManager extends Manager {
     const args = Object.assign({}, params, { email, oauth2_token });
     return this.api.post('user/login_with_google', args).then((response) => {
       if (response.token) {
-        this.api.session.setAccessToken(response.token);
+        this.api.session.accessToken = response.token;
       }
 
       return response;
@@ -83,7 +83,7 @@ class UploadsManager extends Manager {
     const args = Object.assign({}, params, { email, full_name, password });
     return this.api.post('user/register', args).then((response) => {
       if (response.token) {
-        this.api.session.setAccessToken(response.token);
+        this.api.session.accessToken = response.token;
       }
 
       return response;
