@@ -1,7 +1,7 @@
 # todoist-js
 ## The (un)official Todoist javascript API library
 A Todoist API javascript client for full suite of endpoint resources.
-This is a migration from Todoist official [Python lib](https://github.com/Doist/todoist-python).
+This is an adaptation from Todoist official [Python lib](https://github.com/Doist/todoist-python).
 
 ## How to start
 install the package
