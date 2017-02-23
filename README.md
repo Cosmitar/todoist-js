@@ -36,7 +36,7 @@ Test the lib by cloning [this Runkit notebook](https://runkit.com/58a79f5f18a615
 - Node.js on server side and universal javascript apps.
 - Web components for libs like Reactjs, Angular and more.
 - Integration with desktop applications, applets, widgets and all those that support javascript.
-- _Can you think on any other?_
+- _Can you think of any other?_
 
 ## Documentation
 Official API [Docs](https://developer.todoist.com/?python#update-multiple-ordersindents) for developers
