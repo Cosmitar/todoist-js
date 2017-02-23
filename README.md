@@ -13,7 +13,7 @@ import the API
 ```javascript
 import TodoistAPI from 'todoist-js'
 ```
-Create an instance providing an access token
+Create an instance providing an access token (how to [get an access token](https://github.com/Cosmitar/todoist-js/wiki/Getting-access-token)?)
 ```javascript
 const todoist = new TodoistAPI('xxxxxxxxxx');
 ```
@@ -39,7 +39,7 @@ Official API [Docs](https://developer.todoist.com/?python#update-multiple-orders
 Clone this repo `git clone git@github.com:Cosmitar/todoist-js.git`.
 
 This repo includes a Jest suite of tests, used for TDD.
-Before start, make sure you create a `.env` file (you can use `.env-example` as template) and complete, as minimum requirement, the variable `ACCESS_TOKEN` with a valid user access token.
+Before start, make sure you create a `.env` file (you can use `.env-example` as template) and complete, as minimum requirement, the variable `ACCESS_TOKEN` with a valid user access token (how to [get an access token](https://github.com/Cosmitar/todoist-js/wiki/Getting-access-token)?).
 Then, install all dev dependencies by running `npm install`
 
 &#x274C; Do not run all tests together with `npm run test` or you'll get a _max request limit per seconds_ error.
