@@ -26,6 +26,16 @@ todoist.completed.get_stats().then(stats => {
 ```
 &#x1F680; You can see full list of capabilities in action into [tests folder](https://github.com/Cosmitar/todoist-js/tree/master/__tests__)
 
+## Implementation opportunities
+- Web apps, sites.
+- Web plugins for content managers like Wordpress, Joomla, etc.
+- Browsers add-ons.
+- Mobile world with hybrid apps frameworks like react-native, Ionic and others.
+- Node.js on server side and universal javascript apps.
+- Web components for libs like Reactjs, Angular and more.
+- Integration with desktop applications, applets, widgets and others that support javascript.
+- _Can you think on any other?_
+
 ## Documentation
 Official API [Docs](https://developer.todoist.com/?python#update-multiple-ordersindents) for developers
 
