@@ -42,7 +42,7 @@ This repo includes a Jest suite of tests, used for TDD.
 Before start, make sure you create a `.env` file (you can use `.env-example` as template) and complete, as minimum requirement, the variable `ACCESS_TOKEN` with a valid user access token.
 Then, install all dev dependencies by running `npm install`
 
-WARNING: Do not run all tests together with `npm run test` or you'll get a _max request limit per seconds_ error.
+&#x274C; Do not run all tests together with `npm run test` or you'll get a _max request limit per seconds_ error.
 
 Run each suite independently like:
 
@@ -52,6 +52,8 @@ Run each suite independently like:
 
 `npm run test -t filter.spec.js`
 and so on.
+
+&#x2757; Some tests can fail due to restrictions in your account if you're not premium.
 
 If you want to test `share.spec.js` you need first to include a 2nd access token (from a different user) into `.env` file, using variable `ALTERNATIVE_ACCOUNT_ACCESS_TOKEN`
 
