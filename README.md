@@ -24,7 +24,7 @@ todoist.completed.get_stats().then(stats => {
   console.log(stats.karma_trend);
 });
 ```
-You can see full list of capabilities in action into [tests folder](https://github.com/Cosmitar/todoist-js/tree/master/__tests__)
+&#x1F680; You can see full list of capabilities in action into [tests folder](https://github.com/Cosmitar/todoist-js/tree/master/__tests__)
 
 ## Documentation
 Official API [Docs](https://developer.todoist.com/?python#update-multiple-ordersindents) for developers
