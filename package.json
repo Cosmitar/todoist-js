@@ -1,6 +1,6 @@
 {
   "name": "todoist-js",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "The (un)official Todoist javascript API library",
   "main": "dist/index.js",
   "scripts": {
