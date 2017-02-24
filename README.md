@@ -1,6 +1,6 @@
 # todoist-js
 ## The (un)official Todoist javascript API library
-A Todoist API javascript client for full suite of endpoint resources.
+A javascript client for Todoist Sync API with full support of endpoint resources.
 This is an adaptation from Todoist official [Python lib](https://github.com/Doist/todoist-python).
 
 ## How to start
@@ -26,7 +26,7 @@ todoist.completed.get_stats().then(stats => {
 ```
 &#x1F680; You can see full list of capabilities in action into [tests folder](https://github.com/Cosmitar/todoist-js/tree/master/__tests__)
 
-Test the lib by cloning [this Runkit notebook](https://runkit.com/58a79f5f18a61500140b4f19/58af1ca45b8f4a001496241f)
+Try out the lib by cloning [this Runkit notebook](https://runkit.com/58a79f5f18a61500140b4f19/58af1ca45b8f4a001496241f)
 
 ## Implementation opportunities
 - Web apps or sites.
