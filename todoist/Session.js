@@ -58,6 +58,14 @@ class Session {
   }
 
   /**
+  * Sets the authorization code needed later for access token exchange.
+  * @param {string} token
+  */
+  set code(code) {
+    this._code = code;
+  }
+
+  /**
   * Returns the authorization url based on configurations.
   * @return string The full authorization url.
   */
