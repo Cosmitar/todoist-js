@@ -83,7 +83,7 @@ class Session {
   * @return {Promise}
   */
   getAccessToken() {
-    return this.request(this._exchange_toke_url, 'POST', {
+    return this.request(this._exchange_token_url, 'POST', {
       client_id: this._client,
       client_secret: this._secret,
       code: this._code,
