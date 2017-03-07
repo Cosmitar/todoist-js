@@ -145,24 +145,30 @@ class Session {
     return fetch(request_url, {
       method: method,
       headers: headers,
-      body: JSON.stringify(data),
-      credentials: 'include',
+      body: /GET|HEAD/.test(method) ? null : JSON.stringify(data),
+      // credentials: 'include',
+    }).then(response => {
+      if (response.error_code) {
+        throw new Error(`(cod: ${response.error_code}) ${response.error}`);
+      }
+      return response;
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error(`(${response.status}) ${response.statusText}`);
+      }
+
+      return response;
     }).then(response => {
       if (response.sync_token) {
         this._sync_token = response.sync_token;
       }
 
       // Todoist API always returns a JSON, even on error (except on templates as files)
-      if (/attachment/.test(response.headers._headers['content-disposition'])) {
+      if (/attachment/.test(response.headers.get('content-disposition'))) {
         return response;
       } else {
         return response.json();
       }
-    }).then((response) => {
-      if (response.error_code) {
-        throw new Error(`(cod: ${response.error_code}) ${response.error}`);
-      }
-      return response;
     });
   }
 }
