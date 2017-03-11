@@ -42,10 +42,10 @@ Try out the lib by cloning [this Runkit notebook](https://runkit.com/58a79f5f18a
 Official API [Docs](https://developer.todoist.com/?python#update-multiple-ordersindents) for developers
 
 ## What's next
-- Implement a web oAuth2 process and document it.
-- Test compatibility with Node.
-- Test browsers compatibility.
-- Implement a demo app using this library.
+- [ ] Implement a demo app using this library.
+- [ ] Implement a web oAuth2 process and document it.
+- [ ] Test browsers compatibility.
+- [ ] Test compatibility with Node.
 
 ## Development / Testing
 Clone this repo `git clone git@github.com:Cosmitar/todoist-js.git`.
