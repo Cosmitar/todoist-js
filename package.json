@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "eslint": "eslint todoist",
-    "build": "./node_modules/babel-cli/bin/babel.js -d dist/ todoist/ --source-maps",
+    "build": "node ./node_modules/babel-cli/bin/babel.js -d dist/ todoist/ --source-maps",
     "prepublish": "npm run build"
   },
   "jest": {
