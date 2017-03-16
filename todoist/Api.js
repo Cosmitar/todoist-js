@@ -114,10 +114,11 @@ class API {
   * @param {Object} params
   * @return {Promise}
   */
-  post(resource, params) {
+  post(resource, params, headers) {
     return this.session.post(
       this.get_api_url(resource),
-      params
+      params,
+      headers
     );
   }
 
@@ -129,7 +130,7 @@ class API {
   * @return {Object} Server response
   */
   async sync(commands = []) {
-    const response = await this.session.post(
+    const response = await this.session.get(
       this.get_api_url('sync'),
       {
         day_orders_timestamp: this.state.day_orders_timestamp,
