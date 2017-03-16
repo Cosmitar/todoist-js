@@ -126,7 +126,9 @@ class Session {
   request(url, method = 'GET', data = {}, customHeaders = {}) {
     let headers = Object.assign({}, {
       Accept: 'application/json, text/plain, */*',
-      'Content-Type': 'application/json',
+      // content type text/plain avoid preflight request not supported
+      // by API server
+      'Content-Type': 'text/plain',
     }, customHeaders);
 
     if (this._token) {
@@ -143,7 +145,6 @@ class Session {
       method: method,
       headers: headers,
       body: /GET|HEAD/.test(method) ? null : JSON.stringify(data),
-      // credentials: 'include',
     }).then(response => {
       if (response.error_code) {
         throw new Error(`(cod: ${response.error_code}) ${response.error}`);
