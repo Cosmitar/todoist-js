@@ -107,8 +107,8 @@ class Session {
   * @param {Object} data
   * @return {Promise}
   */
-  post(url, data = {}) {
-    return this.request(url, 'POST', data);
+  post(url, data = {}, headers) {
+    return this.request(url, 'POST', data, headers);
   }
 
   _dataToQueryString(data) {
@@ -123,13 +123,11 @@ class Session {
   * @param {string} method An http verb, for this API only GET or POST.
   * @param {Object} data
   */
-  request(url, method = 'GET', data = {}) {
-    let headers = {
+  request(url, method = 'GET', data = {}, customHeaders = {}) {
+    let headers = Object.assign({}, {
       Accept: 'application/json, text/plain, */*',
-      'Content-Type': method === 'GET'
-        ? 'application/json'
-        : 'application/x-www-form-urlencoded',
-    };
+      'Content-Type': 'application/json',
+    }, customHeaders);
 
     if (this._token) {
       data.token = this._token;
@@ -140,7 +138,6 @@ class Session {
     }
 
     const query = this._dataToQueryString(data);
-
     const request_url = `${url}?${query}`;
     return fetch(request_url, {
       method: method,
