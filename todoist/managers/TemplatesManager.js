@@ -9,9 +9,9 @@ class TemplatesManager extends Manager {
   * @return {Promise}
   */
   import_into_project(project_id, file, params) {
-    const args = Object.assign( {}, params, { project_id });
-    const files = { file };
-    return this.api.post('templates/import_into_project', args, files);
+    const args = Object.assign( {}, params, { project_id, file });
+    const headers = { 'Content-Type': 'application/x-www-form-urlencoded' }
+    return this.api.post('templates/import_into_project', args, files, headers);
   }
 
   /**
