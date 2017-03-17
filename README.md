@@ -42,7 +42,7 @@ Try out the lib by cloning [this Runkit notebook](https://runkit.com/58a79f5f18a
 Official API [Docs](https://developer.todoist.com/?python#update-multiple-ordersindents) for developers
 
 ## What's next
-- [ ] Implement a demo app using this library.
+- [x] ~~Implement a demo app using this library.~~  this is [Asist](https://github.com/fusenlabs/asist), it can autenticate, sync, fetch and complete tasks from Todoist.
 - [ ] Implement a web oAuth2 process and document it.
 - [ ] Test browsers compatibility.
 - [ ] Test compatibility with Node.
