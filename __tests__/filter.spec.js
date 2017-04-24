@@ -4,12 +4,6 @@ require("babel-polyfill");
 import API from './../todoist/Api';
 const api = new API(process.env.ACCESS_TOKEN);
 
-afterAll(async () => {
-  // filter1.delete();
-  // filter2.delete();
-  // await api.commit();
-});
-
 let filter1;
 let filter2;
 

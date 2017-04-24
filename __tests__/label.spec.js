@@ -4,22 +4,9 @@ require("babel-polyfill");
 import API from './../todoist/Api';
 const api = new API(process.env.ACCESS_TOKEN);
 
-afterAll(async () => {
-  // Cleaning the room
-  // label1.delete();
-  // label2.delete();
-  // await api.commit();
-});
-
 let label1;
 let label2;
 
-// test.only('maintenance', async () => {
-//   await api.sync();
-//   api.state.labels[0].delete();
-//   await api.commit();
-//   console.log(api.state.labels);
-// });
 test('Manager should add a label', async () => {
   await api.sync();
   label1 = api.labels.add('Label1');
