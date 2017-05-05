@@ -29,7 +29,7 @@ todoist.completed.get_stats().then(stats => {
 Try out the lib by cloning [this Runkit notebook](https://runkit.com/58a79f5f18a61500140b4f19/58af1ca45b8f4a001496241f)
 
 ## Implementation opportunities
-- Web apps or sites.
+- Web apps or sites integration.
 - Web plugins for content managers like Wordpress, Joomla, etc.
 - Browsers add-ons.
 - Mobile world with hybrid apps frameworks like react-native, Ionic and others.
@@ -42,7 +42,7 @@ Try out the lib by cloning [this Runkit notebook](https://runkit.com/58a79f5f18a
 Official API [Docs](https://developer.todoist.com/?python#update-multiple-ordersindents) for developers
 
 ## What's next
-- [x] ~~Implement a demo app using this library.~~  this is [Asist](https://github.com/fusenlabs/asist), it can autenticate, sync, fetch and complete tasks from Todoist.
+- [x] ~~Implement a demo app using this library.~~&#x2705; : this is [Asist](https://github.com/fusenlabs/asist), it can autenticate, sync, fetch and complete tasks for Todoist.
 - [ ] Implement a web oAuth2 process and document it.
 - [ ] Test browsers compatibility.
 - [ ] Test compatibility with Node.
