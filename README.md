@@ -43,7 +43,7 @@ Official API [Docs](https://developer.todoist.com/?python#update-multiple-orders
 
 ## What's next
 - [x] ~~Implement a demo app using this library.~~&#x2705; : this is [Asist](https://github.com/fusenlabs/asist), it can autenticate, sync, fetch and complete tasks for Todoist.
-- [ ] Implement a web oAuth2 process and document it.
+- [x] ~~Implement a web oAuth2 process and document it.~~&#x2705; : [OAuth process](https://github.com/Cosmitar/todoist-js/wiki/OAuth2-with-todoist-js)
 - [ ] Test browsers compatibility.
 - [ ] Test compatibility with Node.
 
