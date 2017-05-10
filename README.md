@@ -70,7 +70,7 @@ and so on.
 If you want to test `share.spec.js` you need first to include a 2nd access token (from a different user) into `.env` file, using variable `ALTERNATIVE_ACCOUNT_ACCESS_TOKEN`
 
 ## Contributing
-Pull requests and issues are welcome. If you've found an bug, please open an issue.
+Pull requests and issues are welcome. If you've found a bug, please open an issue.
 
 ## License
 MIT
