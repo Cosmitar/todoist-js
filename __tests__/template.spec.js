@@ -36,7 +36,7 @@ test('Manager should export project as url', async () => {
   };
   const fileResponse = await getFile();
 
-  expect(String(fileResponse)).toEqual(expect.stringMatching(/task,Item1_template,4,1,/));
+  expect(fileResponse).toEqual(expect.stringMatching(/task,Item1_template,4,1,/));
 
   item1.delete();
   project1.delete();
