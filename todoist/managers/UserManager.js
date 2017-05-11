@@ -1,6 +1,6 @@
 import Manager from './Manager';
 
-class UploadsManager extends Manager {
+class UserManager extends Manager {
   /**
   * Updates the user data.
   * @param {Object} params
@@ -106,4 +106,4 @@ class UploadsManager extends Manager {
   }
 }
 
-export default UploadsManager;
+export default UserManager;
