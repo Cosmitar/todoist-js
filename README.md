@@ -1,4 +1,4 @@
-# todoist-js
+# todoist-js ![NPM version](https://img.shields.io/npm/v/todoist-js.svg)
 ## The (un)official Todoist javascript API library
 A javascript client for Todoist Sync API with full support of endpoint resources.
 This is an adaptation from Todoist official [Python lib](https://github.com/Doist/todoist-python).
@@ -29,7 +29,7 @@ todoist.completed.get_stats().then(stats => {
 Try out the lib by cloning [this Runkit notebook](https://runkit.com/58a79f5f18a61500140b4f19/58af1ca45b8f4a001496241f)
 
 ## Implementation opportunities
-- Web apps or sites.
+- Web apps or sites integration.
 - Web plugins for content managers like Wordpress, Joomla, etc.
 - Browsers add-ons.
 - Mobile world with hybrid apps frameworks like react-native, Ionic and others.
@@ -42,8 +42,8 @@ Try out the lib by cloning [this Runkit notebook](https://runkit.com/58a79f5f18a
 Official API [Docs](https://developer.todoist.com/?python#update-multiple-ordersindents) for developers
 
 ## What's next
-- [x] ~~Implement a demo app using this library.~~  this is [Asist](https://github.com/fusenlabs/asist), it can autenticate, sync, fetch and complete tasks from Todoist.
-- [ ] Implement a web oAuth2 process and document it.
+- [x] ~~Implement a demo app using this library.~~&#x2705; : this is [Asist](https://github.com/fusenlabs/asist), it can autenticate, sync, fetch and complete tasks for Todoist.
+- [x] ~~Implement a web oAuth2 process and document it.~~&#x2705; : [OAuth process](https://github.com/Cosmitar/todoist-js/wiki/OAuth2-with-todoist-js)
 - [ ] Test browsers compatibility.
 - [ ] Test compatibility with Node.
 
@@ -70,7 +70,7 @@ and so on.
 If you want to test `share.spec.js` you need first to include a 2nd access token (from a different user) into `.env` file, using variable `ALTERNATIVE_ACCOUNT_ACCESS_TOKEN`
 
 ## Contributing
-Pull requests and issues are welcome. If you've found an bug, please open an issue.
+Pull requests and issues are welcome. If you've found a bug, please open an issue.
 
 ## License
 MIT
