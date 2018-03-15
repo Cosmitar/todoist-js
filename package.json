@@ -21,6 +21,12 @@
   ],
   "author": "cosmitar",
   "license": "ISC",
+  "babel": {
+    "presets": [
+      "env",
+      "babili"
+    ]
+  },
   "devDependencies": {
     "babel": "^6.20.0",
     "babel-cli": "^6.23.0",
