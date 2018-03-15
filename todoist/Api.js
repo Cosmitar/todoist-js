@@ -155,10 +155,12 @@ class API {
 
   /**
   * Performs a server query
+  * @deprecated
   * @param {Array.<Object>} params List of parameters to query
   * @return {Promise}
   */
   query(params = []) {
+    console.warning('You are using a deprecated method "query". Unexpected behaviors might occur. See: https://github.com/Doist/todoist-api/issues/22');
     return this.session.get(
       this.get_api_url('query'),
       { queries: JSON.stringify(params) }
