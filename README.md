@@ -1,3 +1,9 @@
+# OBSOLETE
+## Todoist V7 endpoint is deprecated
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+
 # todoist-js ![NPM version](https://img.shields.io/npm/v/todoist-js.svg)
 ## The (un)official Todoist javascript API library
 A javascript client for Todoist Sync API with full support of endpoint resources.
